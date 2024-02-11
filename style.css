@@ -1,0 +1,259 @@
+/* normalize styles  */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+ol,
+ul {
+  padding: 0;
+  list-style: none;
+}
+blockquote,
+body,
+dd,
+dl,
+figcaption,
+figure,
+h1,
+h2,
+h3,
+h4,
+li,
+ol[class],
+p,
+ul[class] {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  background: #f5f6fa;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+article > * + * {
+  margin-top: 1em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='500' viewBox='0 0 1000 500' fill='none' %3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M139 0H1000V500H874L139 0Z' fill='%23F26D6D' /%3E%3Cpath d='M0 500V0H139L874 500H0Z' fill='%23F04949' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.modal__button_open:link,
+.modal__button_open:visited {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 12px 56px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  user-select: none;
+
+  transition: transform 0.3s ease-in-out, box-shadow 0.4s ease-in;
+}
+
+.modal__button_open:hover {
+  transform: translate(-50%, -57%);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modal__button_open:active {
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+
+  display: none;
+}
+
+.modal__main {
+  position: relative;
+
+  margin: auto;
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 552px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 15px;
+  background: #e8ebf3;
+}
+
+.modal__circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.modal__circle:first-child {
+  cursor: pointer;
+  background-color: #e85162;
+
+  transition: opacity 0.3s ease;
+}
+
+.modal__circle:first-child:hover {
+  opacity: 0.6;
+}
+
+.modal__circle:nth-child(2n) {
+  background-color: #f29b3d;
+}
+
+.modal__circle:last-child {
+  background-color: #40ab55;
+}
+
+.modal__title-box {
+  display: flex;
+  gap: 11px;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 40px 0;
+  background: #dae0e4;
+}
+
+.modal__title {
+  width: 100%;
+  height: 15px;
+  max-width: 114px;
+  border-radius: 4px;
+
+  background-color: #c5cbcf;
+}
+
+.modal__subtitle {
+  max-width: 41px;
+}
+
+.modal__content-box {
+  max-width: 332px;
+  margin-inline: auto;
+  padding: 20px 0 32px;
+  background-color: #fff;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.modal-item {
+  width: 100%;
+  max-width: 100px;
+
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+
+  margin-inline: auto;
+}
+
+.modal-item__img {
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+
+  background: #dae0e4;
+}
+
+.modal-item__title {
+  width: 100%;
+  height: 15px;
+  border-radius: 4px;
+
+  background-color: #c6cacd;
+}
+
+.modal-item__title_41 {
+  max-width: 41px;
+}
+
+.modal-item__title_88 {
+  max-width: 88px;
+}
+
+.modal-item__title_67 {
+  max-width: 67px;
+}
+
+.modal-item__title_35 {
+  max-width: 35px;
+}
+
+@media all and (max-width: 395px) {
+  .modal__content-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
